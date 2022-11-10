@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta  name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+  <a>Espere...</a>
+<body>
+  <script>
+    const AS_URL_BASE = "https://script.google.com/a/~/macros/s/AKfycbxBoMgdYImMAwiF03gIh9tUvoL182jtdOWZSA8QTI9wmM6tTv2vxvcZJJ_yyZ45wlJzqw/exec";
+    
+    var url = document.location.href;
+    var k = url.substr(url.lastIndexOf("k=")+2);
+    
+    if(k){
+      fetch(AS_URL_BASE+'?k='+k)
+      .then(r => r.text())
+      .then((r) => {
+        console.log(r);
+        //document.write(r);
+        if(r){
+          document.location.replace(r);
+        }
+      })
+      .catch(err => console.log(err))
+    }
+
+  </script>
+<div class="vertical">
+      
+    <div class="box">
+      <img src="Data.png" class="responsive" ></img>
+      
+</div>
+<div class=" load">
+  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+</div>
+  
+</body>
+</html>
+  
+</body>
+</html>
